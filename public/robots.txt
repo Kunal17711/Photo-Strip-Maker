@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://photo-strip-maker.vercel.app/sitemap.xml

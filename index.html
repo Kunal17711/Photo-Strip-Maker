@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Photo Strip Maker Online (Photo Booth, No Login)</title>
+    <meta
+      name="description"
+      content="Make cute Korean photo booth strips online in seconds. Use your camera or upload photos with pastel frames, filters, and stickers. Free, private, no login."
+    />
+    <link rel="canonical" href="https://photo-strip-maker.vercel.app/" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='14' y='4' width='36' height='56' rx='8' fill='%23FFD6E7' stroke='%23E14D8A' stroke-width='3'/%3E%3Crect x='20' y='10' width='24' height='12' rx='3' fill='%23FFF8FB'/%3E%3Crect x='20' y='25' width='24' height='12' rx='3' fill='%23FFF8FB'/%3E%3Crect x='20' y='40' width='24' height='12' rx='3' fill='%23FFF8FB'/%3E%3Cpath d='M32 19.5c-2.2-1.8-4-3.2-4-5 0-1.4 1.1-2.5 2.5-2.5.8 0 1.5.4 1.5.9 0-.5.7-.9 1.5-.9 1.4 0 2.5 1.1 2.5 2.5 0 1.8-1.8 3.2-4 5z' fill='%23E14D8A'/%3E%3C/svg%3E"
+    />
+
+    <!-- OpenGraph Social Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Photo Strip Maker" />
+    <meta property="og:title" content="Free Photo Strip Maker Online (Photo Booth, No Login)" />
+    <meta
+      property="og:description"
+      content="Make cute Korean photo booth strips online in seconds. Use your camera or upload photos with pastel frames, filters, and stickers. Free, private, no login."
+    />
+    <meta property="og:url" content="https://photo-strip-maker.vercel.app/" />
+    <meta property="og:image" content="https://photo-strip-maker.vercel.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:image:alt" content="Cute pastel Korean 4-cut photo booth strips on a cozy desk" />
+
+    <!-- Twitter / X Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Photo Strip Maker Online (Photo Booth, No Login)" />
+    <meta
+      name="twitter:description"
+      content="Make cute Korean photo booth strips online in seconds. Use your camera or upload photos with pastel frames, filters, and stickers. Free, private, no login."
+    />
+    <meta name="twitter:image" content="https://photo-strip-maker.vercel.app/og-image.jpg" />
+
+    <!-- Fonts: Fredoka (Headings), Nunito (Body), Space Mono (Retro Date Stamp) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AdSense snippet can be added here later -->
+
+    <!-- Structured Data: WebApplication & FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Photo Strip Maker",
+            "url": "https://photo-strip-maker.vercel.app/",
+            "applicationCategory": "PhotographyApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "Requires HTML5 Canvas and modern web browser",
+            "description": "Create cute Korean-style pastel photo booth strips in your browser using your camera or gallery photos. Customize layouts, pastel themes, filters, stickers, and captions with zero uploads.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I make a photo strip online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Upload 1 to 4 photos from your gallery or tap Photo Booth Mode to snap 4 automatic shots with a 3-2-1 countdown. Then pick a layout, pastel frame theme, filter, cute stickers, and caption, and tap Download PNG."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Photo Strip Maker completely free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Photo Strip Maker is 100% free to use with no login, no subscription, and unlimited high-resolution PNG downloads."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are my photos uploaded to any server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Never. Everything runs locally inside your browser using the HTML5 Canvas API. Your photos never leave your phone or computer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use my phone or laptop camera like a real photo booth?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! Tap Photo Booth Mode to open a mirrored front-camera preview with an automatic 3-2-1 countdown and gentle camera flash for 4 consecutive poses."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What size is the downloaded photo strip?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Classic 4-frame vertical strips export as crisp 1200 x 3600 px PNG files. 3-frame strips export at 1200 x 2850 px, 2x2 grids at 1800 x 2250 px, and Polaroids at 1500 x 1860 px."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="min-h-screen antialiased selection:bg-pink-200 selection:text-pink-950">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

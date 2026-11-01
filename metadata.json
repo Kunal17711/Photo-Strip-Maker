@@ -1,0 +1,6 @@
+{
+  "name": "Photo Strip Maker",
+  "description": "Free online photo booth strip maker. Create cute Korean-style pastel photo strips with your camera or gallery, add filters, stickers, and captions, and download high-res PNGs privately in your browser.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", ui-rounded, "Hiragino Maru Gothic ProN", sans-serif;
+  --font-sans: "Nunito", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #2d1f2d;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: linear-gradient(145deg, #fff5f9 0%, #fdf2f8 48%, #f5f2ff 100%);
+    background-attachment: fixed;
+    color: #2d1f2d;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-display);
+  }
+}
+
+/* Tactile button bounce respecting settling latency <= 200ms */
+.btn-bounce {
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+.btn-bounce:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+/* Subtle floating pastel hearts & sparkles (compositor-only: transform & opacity) */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0.42;
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) rotate(6deg);
+    opacity: 0.72;
+  }
+}
+
+@keyframes twinkleGentle {
+  0%, 100% {
+    transform: scale(0.92) rotate(0deg);
+    opacity: 0.32;
+  }
+  50% {
+    transform: scale(1.08) rotate(12deg);
+    opacity: 0.68;
+  }
+}
+
+.decor-float-slow {
+  animation: floatGentle 7s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.decor-float-delayed {
+  animation: floatGentle 8.5s ease-in-out 2s infinite;
+  will-change: transform, opacity;
+}
+
+.decor-twinkle {
+  animation: twinkleGentle 5.5s ease-in-out 1s infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .decor-float-slow,
+  .decor-float-delayed,
+  .decor-twinkle {
+    animation: none !important;
+  }
+  .btn-bounce {
+    transition: none !important;
+  }
+}
+
+/* Accessible cute pastel range input */
+input[type="range"].cute-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  background: #f5dce8;
+  outline: none;
+}
+
+input[type="range"].cute-slider:focus-visible {
+  box-shadow: 0 0 0 3px rgba(225, 77, 138, 0.35);
+}
+
+input[type="range"].cute-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e14d8a;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(180, 60, 110, 0.28);
+  cursor: pointer;
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].cute-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"].cute-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e14d8a;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(180, 60, 110, 0.28);
+  cursor: pointer;
+}
+
+/* Hide scrollbars cleanly for horizontal mobile tab bars while preserving scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
